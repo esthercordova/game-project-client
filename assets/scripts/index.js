@@ -47,12 +47,12 @@ $( document ).ready(function() {
   let checkBoardGame = function  (){
 
     //row 1
-    if('unclicked'!= boardState['top-left'] &&
-     boardState['top-left'] == boardState['top-center'] &&
-     boardState['top-center'] == boardState['top-right'] &&
-     boardState['top-right'] == boardState['top-left']){
+    if('unclicked'!== boardState['top-left'] &&
+     boardState['top-left'] === boardState['top-center'] &&
+     boardState['top-center'] === boardState['top-right'] &&
+     boardState['top-right'] === boardState['top-left']){
 
-      if(boardState['top-left'] == 'x'){
+      if(boardState['top-left'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -62,12 +62,12 @@ $( document ).ready(function() {
       }
     }
     //row 2
-    else if('unclicked'!= boardState['middle-left'] &&
-     boardState['middle-left'] == boardState['middle-center'] &&
-     boardState['middle-center'] == boardState['middle-right'] &&
-     boardState['middle-right'] == boardState['middle-left']){
+    else if('unclicked'!== boardState['middle-left'] &&
+     boardState['middle-left'] === boardState['middle-center'] &&
+     boardState['middle-center'] === boardState['middle-right'] &&
+     boardState['middle-right'] === boardState['middle-left']){
 
-      if(boardState['middle-left'] == 'x'){
+      if(boardState['middle-left'] === 'x'){
         winner = 'x';
         return;
       }
@@ -77,12 +77,12 @@ $( document ).ready(function() {
       }
     }
     //row 3
-    else if( 'unclicked'!= boardState['bottom-left'] &&
-     boardState['bottom-left'] == boardState['bottom-center'] &&
-     boardState['bottom-center'] == boardState['bottom-right'] &&
-     boardState['bottom-right'] == boardState['bottom-left']){
+    else if( 'unclicked'!== boardState['bottom-left'] &&
+     boardState['bottom-left'] === boardState['bottom-center'] &&
+     boardState['bottom-center'] === boardState['bottom-right'] &&
+     boardState['bottom-right'] === boardState['bottom-left']){
 
-      if(boardState['bottom-left'] == 'x'){
+      if(boardState['bottom-left'] === 'x'){
         winner = 'x'
         return winner;
       }
@@ -92,12 +92,12 @@ $( document ).ready(function() {
       }
     }
     //col 1
-    else if( 'unclicked'!= boardState['top-left'] &&
-     boardState['top-left'] == boardState['middle-left'] &&
-     boardState['middle-left'] == boardState['bottom-left'] &&
-     boardState['top-left'] == boardState['bottom-left']){
+    else if( 'unclicked'!== boardState['top-left'] &&
+     boardState['top-left'] === boardState['middle-left'] &&
+     boardState['middle-left'] === boardState['bottom-left'] &&
+     boardState['top-left'] === boardState['bottom-left']){
 
-      if(boardState['top-left'] == 'x'){
+      if(boardState['top-left'] === 'x'){
         winner = 'x'
         return winner;
       }
@@ -107,12 +107,12 @@ $( document ).ready(function() {
       }
     }
     //col 2
-    else if( 'unclicked'!= boardState['top-center'] &&
-     boardState['top-center'] == boardState['middle-center'] &&
-     boardState['middle-center'] == boardState['bottom-center'] &&
-     boardState['top-center'] == boardState['bottom-center']){
+    else if( 'unclicked'!== boardState['top-center'] &&
+     boardState['top-center'] === boardState['middle-center'] &&
+     boardState['middle-center'] === boardState['bottom-center'] &&
+     boardState['top-center'] === boardState['bottom-center']){
 
-      if(boardState['top-center'] == 'x'){
+      if(boardState['top-center'] === 'x'){
         winner = 'x'
         return winner;
       }
@@ -122,12 +122,12 @@ $( document ).ready(function() {
       }
     }
     //col 3
-    else if( 'unclicked'!= boardState['top-right'] &&
-     boardState['top-right'] == boardState['middle-right'] &&
-     boardState['middle-right'] == boardState['bottom-right'] &&
-     boardState['top-right'] == boardState['bottom-right']){
+    else if( 'unclicked'!== boardState['top-right'] &&
+     boardState['top-right'] === boardState['middle-right'] &&
+     boardState['middle-right'] === boardState['bottom-right'] &&
+     boardState['top-right'] === boardState['bottom-right']){
 
-      if(boardState['top-right'] == 'x'){
+      if(boardState['top-right'] === 'x'){
         winner = 'x'
         return winner;
       }
@@ -137,12 +137,12 @@ $( document ).ready(function() {
       }
     }
     //diagonal 1
-    else if( 'unclicked'!= boardState['top-left'] &&
-     boardState['top-left'] == boardState['middle-center'] &&
-     boardState['middle-center'] == boardState['bottom-right'] &&
-     boardState['bottom-right'] == boardState['top-left']){
+    else if( 'unclicked'!== boardState['top-left'] &&
+     boardState['top-left'] === boardState['middle-center'] &&
+     boardState['middle-center'] === boardState['bottom-right'] &&
+     boardState['bottom-right'] === boardState['top-left']){
 
-      if(boardState['top-left'] == 'x'){
+      if(boardState['top-left'] === 'x'){
         winner = 'x'
         return winner;
       }
@@ -152,12 +152,12 @@ $( document ).ready(function() {
       }
     }
     //diagonal 2
-    else if( 'unclicked'!= boardState['top-right'] &&
-     boardState['top-right'] == boardState['middle-center'] &&
-     boardState['middle-center'] == boardState['bottom-left'] &&
-     boardState['bottom-left'] == boardState['top-right']){
+    else if( 'unclicked'!== boardState['top-right'] &&
+     boardState['top-right'] === boardState['middle-center'] &&
+     boardState['middle-center'] === boardState['bottom-left'] &&
+     boardState['bottom-left'] === boardState['top-right']){
 
-      if(boardState['top-left'] == 'x'){
+      if(boardState['top-left'] === 'x'){
         winner = 'x'
         return winner;
       }
