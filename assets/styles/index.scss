@@ -10,6 +10,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 h1 {
 	text-align: center;
+	color: #59b294;
 }
 
 #board{
@@ -18,9 +19,12 @@ h1 {
 }
 
 #playero {
-	color: #EE178C;
+	color: #e6e6e6;
 }
 
 #playerx {
-	color: gray;
+	color: #4dffc3;
+}
+body {
+	background-color: white;
 }
