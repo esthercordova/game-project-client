@@ -44,6 +44,34 @@ $( document ).ready(function() {
   let scoreO = 0;
   let scoreX = 0;
 
+  // check for tie
+  let checkTie = function () {
+  for (let key in boardState) {
+    if (boardState[key] === 'unclicked') {
+      return false;
+    }
+  }
+  return true;
+  };
+
+  let endGame = function(){
+    if (winner === 'o' || winner === 'x') {
+      if(winner === 'o'){
+        scoreO += 1;
+    } else {
+        scoreX += 1;
+    }
+    activeGame = false;
+    // console.log("score o is: "+ scoreO +" and score x is " + scoreX);
+    if(winner === 'o') {
+      $('#playero').html('Player o : ' + scoreO);
+    } else if (winner === 'x') {
+      $('#playerx').html('Player x : ' + scoreX);
+    }
+    $('#gameWinner').html('The winner is: ' + winner);
+    winner = null;
+  }};
+
   let checkBoardGame = function  (){
 
     //row 1
@@ -166,28 +194,20 @@ $( document ).ready(function() {
         return winner;
       }
     }
-    else if (checkTie()==true) {
+    else if (checkTie()===true) {
       $('#gameWinner').html('The game is a tie');
     }
 
   };
 
-  // check for tie
-  let checkTie = function () {
-  for (let key in boardState) {
-    if (boardState[key] == 'unclicked') {
-      return false;
-    }
-  }
-  return true;
-  };
+
 
   // make moves and color the square accordningly
   $(".square").click(function () {
-    if (activeGame == true) {
-        if(boardState[this.id] == 'unclicked') {
+    if (activeGame === true) {
+        if(boardState[this.id] === 'unclicked') {
 
-          if(playerMove == 'o') {
+          if(playerMove === 'o') {
 
               $(this).css('background-color','#EE178C');
               boardState[this.id] = 'o';
@@ -199,36 +219,16 @@ $( document ).ready(function() {
               boardState[this.id] = 'x';
               playerMove = 'o';
             }
-          };
+          }
 
             checkBoardGame();
           // console.log('Its this players turn ' + playerMove);
           // console.log(boardState);
            $('#showPlayersTurn').html(playerMove);
            endGame();
-          };
+          }
 
   });
-
-
-  let endGame = function(){
-    if (winner == 'o' || winner == 'x') {
-      if(winner == 'o'){
-        scoreO += 1;
-    } else {
-        scoreX += 1;
-    }
-
-    activeGame = false;
-    // console.log("score o is: "+ scoreO +" and score x is " + scoreX);
-    if(winner == 'o') {
-      $('#playero').html('Player o : ' + scoreO);
-    } else if (winner == 'x') {
-      $('#playerx').html('Player x : ' + scoreX);
-    }
-    $('#gameWinner').html('The winner is: ' + winner);
-    winner = null;
-  }}
 
     $("#newGame").click(function() {
       newGameBegin();
@@ -241,17 +241,13 @@ $('#sign-in').on('submit', function(){
 
 
 
-
-
-
-
-$('#signIn').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-
-
-$('#signUp').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
+// $('#signIn').on('shown.bs.modal', function () {
+//   $('#myInput').focus();
+// });
+//
+//
+// $('#signUp').on('shown.bs.modal', function () {
+//   $('#myInput').focus();
+// });
 
   });
