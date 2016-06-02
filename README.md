@@ -22,3 +22,7 @@
 - As a consumer of a tictactoe game I want the game to respect all common rules.
 
 ## Link To Game
+
+## Link to previous repo
+
+https://github.com/esthercordova/tictactoe/commits/master
