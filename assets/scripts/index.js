@@ -7,6 +7,8 @@ $(() => {
   authEvents.addHandlers();
 });
 
+
+
 $( document ).ready(function() {
 
   let boardState;
@@ -155,7 +157,7 @@ $( document ).ready(function() {
      boardState['middle-center'] == boardState['bottom-left'] &&
      boardState['bottom-left'] == boardState['top-right']){
 
-      if(boardState['top-right'] == 'x'){
+      if(boardState['top-left'] == 'x'){
         winner = 'x'
         return winner;
       }
@@ -172,7 +174,7 @@ $( document ).ready(function() {
 
   // check for tie
   let checkTie = function () {
-  for (var key in boardState) {
+  for (let key in boardState) {
     if (boardState[key] == 'unclicked') {
       return false;
     }
@@ -253,4 +255,3 @@ $('#signUp').on('shown.bs.modal', function () {
 })
 
   });
-
