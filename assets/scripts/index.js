@@ -57,7 +57,7 @@ $( document ).ready(function() {
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
@@ -83,11 +83,11 @@ $( document ).ready(function() {
      boardState['bottom-right'] === boardState['bottom-left']){
 
       if(boardState['bottom-left'] === 'x'){
-        winner = 'x'
+        winner = 'x';
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
@@ -98,11 +98,11 @@ $( document ).ready(function() {
      boardState['top-left'] === boardState['bottom-left']){
 
       if(boardState['top-left'] === 'x'){
-        winner = 'x'
+        winner = 'x';
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
@@ -113,11 +113,11 @@ $( document ).ready(function() {
      boardState['top-center'] === boardState['bottom-center']){
 
       if(boardState['top-center'] === 'x'){
-        winner = 'x'
+        winner = 'x';
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
@@ -128,11 +128,11 @@ $( document ).ready(function() {
      boardState['top-right'] === boardState['bottom-right']){
 
       if(boardState['top-right'] === 'x'){
-        winner = 'x'
+        winner = 'x';
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
@@ -143,11 +143,11 @@ $( document ).ready(function() {
      boardState['bottom-right'] === boardState['top-left']){
 
       if(boardState['top-left'] === 'x'){
-        winner = 'x'
+        winner = 'x';
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
@@ -158,11 +158,11 @@ $( document ).ready(function() {
      boardState['bottom-left'] === boardState['top-right']){
 
       if(boardState['top-left'] === 'x'){
-        winner = 'x'
+        winner = 'x';
         return winner;
       }
       else{
-        winner = 'o'
+        winner = 'o';
         return winner;
       }
     }
