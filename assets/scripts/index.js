@@ -209,13 +209,13 @@ $( document ).ready(function() {
 
           if(playerMove === 'o') {
 
-              $(this).css('background-color','#EE178C');
+              $(this).css('background-color','#e6e6e6');
               boardState[this.id] = 'o';
               playerMove = 'x';
             }
 
           else{
-              $(this).css('background-color','#888888');
+              $(this).css('background-color','#80ffd4');
               boardState[this.id] = 'x';
               playerMove = 'o';
             }
