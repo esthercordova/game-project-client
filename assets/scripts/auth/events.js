@@ -55,19 +55,6 @@ const onGetGame = function(event) {
   .fail(ui.failure);
 };
 
-// const onUpdateGame = function(event) {
-//   event.preventDefault();
-//   let index = $(this).data("id");
-//   let player = logic.playerMove;
-
-//   debugger;
-//   api.onUpdateGame(index, player)
-//   .done(ui.updateGame)
-//   .fail(ui.failure);
-// };
-
-
-
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);

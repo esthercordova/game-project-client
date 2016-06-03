@@ -9,33 +9,23 @@ $(() => {
   authEvents.addHandlers();
 });
 
-$(document).ready(function() {
   let boardState;
   let simpleArray = ['', '', '', '', '', '', '', '', ''];
-
   let activeGame = false;
+  let playerMove = 'x';
 
   let newGameBegin = function() {
     $('#gameWinner').html('');
     activeGame = true;
     boardState = {
-      '0': '',
-      '1': '',
-      '2': '',
-      '3': '',
-      '4': '',
-      '5': '',
-      '6': '',
-      '7': '',
-      '8': '',
-    };
+      '0': '', '1': '', '2': '', '3': '','4': '', '5': '',
+      '6': '', '7': '','8': '',
+      };
 
-    $(".square").css('background-color', 'white');
+      $(".square").css('background-color', 'white');
   };
 
   newGameBegin();
-
-  let playerMove = 'x';
 
   $('#showPlayersTurn').html(playerMove);
 
@@ -242,7 +232,6 @@ $(document).ready(function() {
 
   $('#playAgain').on('click', function(event) {
     $('#gameOver').modal('toggle');
-    // $('.square').css('background-color','#fff');
   });
 
 
@@ -255,5 +244,3 @@ $(document).ready(function() {
   // $('#signUp').on('shown.bs.modal', function () {
   //   $('#myInput').focus();
   // });
-
-});
