@@ -23,6 +23,7 @@ const signInSuccess = (data) => {
 const signOutSuccess = function (){
   app.user = null;
   console.log(app);
+  console.log("You signed out successfully");
 };
 
 

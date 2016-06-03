@@ -43,10 +43,21 @@ const changePassword = function (data) {
     });
   };
 
+  const createNewGame = function () {
+    return $.ajax(
+      {
+        url: app.host + '/games/',
+        method: 'POST' ,
+        headers: {
+          Authorization: 'Token token=' + app.user.token,
+        }
+      });
+  };
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  createNewGame
 };
-
