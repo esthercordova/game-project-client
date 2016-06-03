@@ -52,9 +52,9 @@ const onGetGame = function(event) {
   .fail(ui.failure);
 };
 
-const onUpdateGame = function(event) {
-  event.preventDefault();
-}
+// const onUpdateGame = function(event) {
+//   event.preventDefault();
+// }
 
 
 
@@ -65,7 +65,7 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword);
   $('#newGame').click(onCreateNewGame);
   $('#getGame').on('submit', onGetGame);
-  $('#board').click(onUpdateGame);
+  // $('#board').click(onUpdateGame);
 
 };
 

@@ -12,7 +12,7 @@ $(() => {
 $( document ).ready(function() {
 
   let boardState;
-  let simpleArray = [];
+  let simpleArray = ['','','','','','','','',''];
 
   let activeGame = false;
 
