@@ -12,6 +12,7 @@ $(() => {
 $( document ).ready(function() {
 
   let boardState;
+  let simpleArray = [];
 
   let activeGame = false;
 
@@ -73,6 +74,7 @@ $( document ).ready(function() {
   }};
 
   let checkBoardGame = function  (){
+    console.log(boardState);
 
     //row 1
     if('unclicked'!== boardState['top-left'] &&
