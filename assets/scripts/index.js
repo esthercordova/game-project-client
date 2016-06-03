@@ -20,15 +20,15 @@ $( document ).ready(function() {
     $('#gameWinner').html('');
       activeGame = true;
       boardState = {
-        'top-left': '',
-        'top-center': '',
-        'top-right': '',
-        'middle-left': '',
-        'middle-center': '',
-        'middle-right': '',
-        'bottom-left': '',
-        'bottom-center': '',
-        'bottom-right': '',
+        '0': '',
+        '1': '',
+        '2': '',
+        '3': '',
+        '4': '',
+        '5': '',
+        '6': '',
+        '7': '',
+        '8': '',
       };
 
       $(".square").css('background-color', 'white');
@@ -74,15 +74,14 @@ $( document ).ready(function() {
   }};
 
   let checkBoardGame = function  (){
-    console.log(boardState);
 
     //row 1
-    if(''!== boardState['top-left'] &&
-     boardState['top-left'] === boardState['top-center'] &&
-     boardState['top-center'] === boardState['top-right'] &&
-     boardState['top-right'] === boardState['top-left']){
+    if(''!== boardState['0'] &&
+     boardState['0'] === boardState['1'] &&
+     boardState['1'] === boardState['2'] &&
+     boardState['2'] === boardState['0']){
 
-      if(boardState['top-left'] === 'x'){
+      if(boardState['0'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -92,12 +91,12 @@ $( document ).ready(function() {
       }
     }
     //row 2
-    else if(''!== boardState['middle-left'] &&
-     boardState['middle-left'] === boardState['middle-center'] &&
-     boardState['middle-center'] === boardState['middle-right'] &&
-     boardState['middle-right'] === boardState['middle-left']){
+    else if(''!== boardState['3'] &&
+     boardState['3'] === boardState['4'] &&
+     boardState['4'] === boardState['5'] &&
+     boardState['5'] === boardState['3']){
 
-      if(boardState['middle-left'] === 'x'){
+      if(boardState['3'] === 'x'){
         winner = 'x';
         return;
       }
@@ -107,12 +106,12 @@ $( document ).ready(function() {
       }
     }
     //row 3
-    else if( ''!== boardState['bottom-left'] &&
-     boardState['bottom-left'] === boardState['bottom-center'] &&
-     boardState['bottom-center'] === boardState['bottom-right'] &&
-     boardState['bottom-right'] === boardState['bottom-left']){
+    else if( ''!== boardState['6'] &&
+     boardState['6'] === boardState['7'] &&
+     boardState['7'] === boardState['8'] &&
+     boardState['8'] === boardState['6']){
 
-      if(boardState['bottom-left'] === 'x'){
+      if(boardState['6'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -122,12 +121,12 @@ $( document ).ready(function() {
       }
     }
     //col 1
-    else if( ''!== boardState['top-left'] &&
-     boardState['top-left'] === boardState['middle-left'] &&
-     boardState['middle-left'] === boardState['bottom-left'] &&
-     boardState['top-left'] === boardState['bottom-left']){
+    else if( ''!== boardState['0'] &&
+     boardState['0'] === boardState['3'] &&
+     boardState['3'] === boardState['6'] &&
+     boardState['0'] === boardState['6']){
 
-      if(boardState['top-left'] === 'x'){
+      if(boardState['0'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -137,12 +136,12 @@ $( document ).ready(function() {
       }
     }
     //col 2
-    else if( ''!== boardState['top-center'] &&
-     boardState['top-center'] === boardState['middle-center'] &&
-     boardState['middle-center'] === boardState['bottom-center'] &&
-     boardState['top-center'] === boardState['bottom-center']){
+    else if( ''!== boardState['1'] &&
+     boardState['1'] === boardState['4'] &&
+     boardState['4'] === boardState['7'] &&
+     boardState['1'] === boardState['7']){
 
-      if(boardState['top-center'] === 'x'){
+      if(boardState['1'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -152,12 +151,12 @@ $( document ).ready(function() {
       }
     }
     //col 3
-    else if( ''!== boardState['top-right'] &&
-     boardState['top-right'] === boardState['middle-right'] &&
-     boardState['middle-right'] === boardState['bottom-right'] &&
-     boardState['top-right'] === boardState['bottom-right']){
+    else if( ''!== boardState['2'] &&
+     boardState['2'] === boardState['5'] &&
+     boardState['5'] === boardState['8'] &&
+     boardState['2'] === boardState['8']){
 
-      if(boardState['top-right'] === 'x'){
+      if(boardState['2'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -167,12 +166,12 @@ $( document ).ready(function() {
       }
     }
     //diagonal 1
-    else if( ''!== boardState['top-left'] &&
-     boardState['top-left'] === boardState['middle-center'] &&
-     boardState['middle-center'] === boardState['bottom-right'] &&
-     boardState['bottom-right'] === boardState['top-left']){
+    else if( ''!== boardState['0'] &&
+     boardState['0'] === boardState['4'] &&
+     boardState['4'] === boardState['8'] &&
+     boardState['8'] === boardState['0']){
 
-      if(boardState['top-left'] === 'x'){
+      if(boardState['0'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -182,12 +181,12 @@ $( document ).ready(function() {
       }
     }
     //diagonal 2
-    else if( ''!== boardState['top-right'] &&
-     boardState['top-right'] === boardState['middle-center'] &&
-     boardState['middle-center'] === boardState['bottom-left'] &&
-     boardState['bottom-left'] === boardState['top-right']){
+    else if( ''!== boardState['2'] &&
+     boardState['2'] === boardState['4'] &&
+     boardState['4'] === boardState['6'] &&
+     boardState['6'] === boardState['2']){
 
-      if(boardState['top-left'] === 'x'){
+      if(boardState['0'] === 'x'){
         winner = 'x';
         return winner;
       }
@@ -213,12 +212,16 @@ $( document ).ready(function() {
 
               $(this).css('background-color','#e6e6e6');
               boardState[this.id] = 'o';
+              simpleArray.splice(parseInt(this.id), 1, playerMove);
+              console.log(simpleArray);
               playerMove = 'x';
             }
 
           else{
               $(this).css('background-color','#80ffd4');
               boardState[this.id] = 'x';
+              simpleArray.splice(parseInt(this.id), 1, playerMove);
+              console.log(simpleArray);
               playerMove = 'o';
             }
           }
