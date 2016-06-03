@@ -20,15 +20,15 @@ $( document ).ready(function() {
     $('#gameWinner').html('');
       activeGame = true;
       boardState = {
-        'top-left': 'unclicked',
-        'top-center': 'unclicked',
-        'top-right': 'unclicked',
-        'middle-left': 'unclicked',
-        'middle-center': 'unclicked',
-        'middle-right': 'unclicked',
-        'bottom-left': 'unclicked',
-        'bottom-center': 'unclicked',
-        'bottom-right': 'unclicked',
+        'top-left': '',
+        'top-center': '',
+        'top-right': '',
+        'middle-left': '',
+        'middle-center': '',
+        'middle-right': '',
+        'bottom-left': '',
+        'bottom-center': '',
+        'bottom-right': '',
       };
 
       $(".square").css('background-color', 'white');
@@ -48,7 +48,7 @@ $( document ).ready(function() {
   // check for tie
   let checkTie = function () {
   for (let key in boardState) {
-    if (boardState[key] === 'unclicked') {
+    if (boardState[key] === '') {
       return false;
     }
   }
@@ -77,7 +77,7 @@ $( document ).ready(function() {
     console.log(boardState);
 
     //row 1
-    if('unclicked'!== boardState['top-left'] &&
+    if(''!== boardState['top-left'] &&
      boardState['top-left'] === boardState['top-center'] &&
      boardState['top-center'] === boardState['top-right'] &&
      boardState['top-right'] === boardState['top-left']){
@@ -92,7 +92,7 @@ $( document ).ready(function() {
       }
     }
     //row 2
-    else if('unclicked'!== boardState['middle-left'] &&
+    else if(''!== boardState['middle-left'] &&
      boardState['middle-left'] === boardState['middle-center'] &&
      boardState['middle-center'] === boardState['middle-right'] &&
      boardState['middle-right'] === boardState['middle-left']){
@@ -107,7 +107,7 @@ $( document ).ready(function() {
       }
     }
     //row 3
-    else if( 'unclicked'!== boardState['bottom-left'] &&
+    else if( ''!== boardState['bottom-left'] &&
      boardState['bottom-left'] === boardState['bottom-center'] &&
      boardState['bottom-center'] === boardState['bottom-right'] &&
      boardState['bottom-right'] === boardState['bottom-left']){
@@ -122,7 +122,7 @@ $( document ).ready(function() {
       }
     }
     //col 1
-    else if( 'unclicked'!== boardState['top-left'] &&
+    else if( ''!== boardState['top-left'] &&
      boardState['top-left'] === boardState['middle-left'] &&
      boardState['middle-left'] === boardState['bottom-left'] &&
      boardState['top-left'] === boardState['bottom-left']){
@@ -137,7 +137,7 @@ $( document ).ready(function() {
       }
     }
     //col 2
-    else if( 'unclicked'!== boardState['top-center'] &&
+    else if( ''!== boardState['top-center'] &&
      boardState['top-center'] === boardState['middle-center'] &&
      boardState['middle-center'] === boardState['bottom-center'] &&
      boardState['top-center'] === boardState['bottom-center']){
@@ -152,7 +152,7 @@ $( document ).ready(function() {
       }
     }
     //col 3
-    else if( 'unclicked'!== boardState['top-right'] &&
+    else if( ''!== boardState['top-right'] &&
      boardState['top-right'] === boardState['middle-right'] &&
      boardState['middle-right'] === boardState['bottom-right'] &&
      boardState['top-right'] === boardState['bottom-right']){
@@ -167,7 +167,7 @@ $( document ).ready(function() {
       }
     }
     //diagonal 1
-    else if( 'unclicked'!== boardState['top-left'] &&
+    else if( ''!== boardState['top-left'] &&
      boardState['top-left'] === boardState['middle-center'] &&
      boardState['middle-center'] === boardState['bottom-right'] &&
      boardState['bottom-right'] === boardState['top-left']){
@@ -182,7 +182,7 @@ $( document ).ready(function() {
       }
     }
     //diagonal 2
-    else if( 'unclicked'!== boardState['top-right'] &&
+    else if( ''!== boardState['top-right'] &&
      boardState['top-right'] === boardState['middle-center'] &&
      boardState['middle-center'] === boardState['bottom-left'] &&
      boardState['bottom-left'] === boardState['top-right']){
@@ -207,7 +207,7 @@ $( document ).ready(function() {
   // make moves and color the square accordningly
   $(".square").click(function () {
     if (activeGame === true) {
-        if(boardState[this.id] === 'unclicked') {
+        if(boardState[this.id] === '') {
 
           if(playerMove === 'o') {
 
