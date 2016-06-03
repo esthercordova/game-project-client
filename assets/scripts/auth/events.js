@@ -4,10 +4,6 @@ const getFormFields = require('../../../lib/get-form-fields');
 
 const api  = require('./api');
 const ui = require('./ui');
-const logic = require('../index.js');
-// const app = require('../app');
-let turn = 0;
-let move = '';
 
 const onSignUp = function(event){
   event.preventDefault();

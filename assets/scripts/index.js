@@ -13,6 +13,9 @@ $(() => {
   let simpleArray = ['', '', '', '', '', '', '', '', ''];
   let activeGame = false;
   let playerMove = 'x';
+  let winner;
+  let scoreO = 0;
+  let scoreX = 0;
 
   let newGameBegin = function() {
     $('#gameWinner').html('');
@@ -29,12 +32,6 @@ $(() => {
 
   $('#showPlayersTurn').html(playerMove);
 
-  let winner; //grey is x pink is o
-
-  let scoreO = 0;
-  let scoreX = 0;
-
-  // check for tie
   let checkTie = function() {
     for (let key in boardState) {
       if (boardState[key] === '') {
@@ -67,7 +64,6 @@ $(() => {
   };
 
   let checkBoardGame = function() {
-
     //row 1
     if ('' !== boardState['0'] &&
       boardState['0'] === boardState['1'] &&
@@ -185,8 +181,6 @@ $(() => {
 
   };
 
-
-
   // make moves and color the square accordningly
   $(".square").click(function() {
     let index = $(this).data('id');
@@ -222,19 +216,17 @@ $(() => {
     endGame();
   });
 
+  // click handlers
   $("#newGame").click(function() {
     newGameBegin();
   });
 
   $('#sign-in').on('submit', function() {
-
   });
 
-  $('#playAgain').on('click', function(event) {
+  $('#playAgain').on('click', function() {
     $('#gameOver').modal('toggle');
   });
-
-
 
   // $('#signIn').on('shown.bs.modal', function () {
   //   $('#myInput').focus();
