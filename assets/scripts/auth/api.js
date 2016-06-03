@@ -65,11 +65,48 @@ const changePassword = function (data) {
       });
     };
 
+const onUpdateGame = function(index, player){
+      return $.ajax({
+        url: app.host + '/games/' + app.game.id,
+        method: 'PATCH',
+        headers: {
+          Authorization: 'Token token=' + app.user.token,
+        },
+        data: {
+          "game": {
+            "cell": {
+              "index": index,
+              "value": player,
+            },
+            "over": false,
+          }
+        }
+      });
+    };
+
+const onEndGame = function() {
+  return $.ajax({
+    url: app.host + '/games/' + app.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: {
+      "game": {
+        "over": true,
+      }
+    }
+  });
+};
+
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
   createNewGame,
-  getGameByID
+  getGameByID,
+  onUpdateGame,
+  onEndGame,
 };

@@ -4,7 +4,10 @@ const getFormFields = require('../../../lib/get-form-fields');
 
 const api  = require('./api');
 const ui = require('./ui');
-const app = require('../app');
+const logic = require('../index.js');
+// const app = require('../app');
+let turn = 0;
+let move = '';
 
 const onSignUp = function(event){
   event.preventDefault();
@@ -40,7 +43,7 @@ const onChangePassword = function(event){
 const onCreateNewGame = function(event){
   event.preventDefault();
   api.createNewGame()
-  .done(ui.success)
+  .done(ui.createGameSuccess)
   .fail(ui.failure);
 };
 
@@ -54,7 +57,14 @@ const onGetGame = function(event) {
 
 // const onUpdateGame = function(event) {
 //   event.preventDefault();
-// }
+//   let index = $(this).data("id");
+//   let player = logic.playerMove;
+
+//   debugger;
+//   api.onUpdateGame(index, player)
+//   .done(ui.updateGame)
+//   .fail(ui.failure);
+// };
 
 
 
@@ -65,10 +75,12 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword);
   $('#newGame').click(onCreateNewGame);
   $('#getGame').on('submit', onGetGame);
-  // $('#board').click(onUpdateGame);
+  $('#playAgain').on('click', onCreateNewGame);
+  // $('.square').click(onUpdateGame);
 
 };
 
 module.exports = {
   addHandlers,
+  onCreateNewGame,
 };

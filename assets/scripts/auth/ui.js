@@ -4,9 +4,9 @@ const app = require('../app.js');
 
 const success = (data) => {
   if(data){
-  console.log(data);
+
 } else {
-  console.log("success");
+
 }
 };
 
@@ -16,14 +16,26 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  // console.log(app.user);
-
 };
 
 const signOutSuccess = function (){
   app.user = null;
-  console.log(app);
-  console.log("You signed out successfully");
+
+
+};
+
+const createGameSuccess = function (data) {
+  app.game = data.game;
+
+};
+
+const updateGame = function (data) {
+  app.game = data.game;
+
+};
+
+const endGame = function() {
+  $('#gameOver').modal('show');
 };
 
 
@@ -32,5 +44,7 @@ module.exports = {
   success,
   signInSuccess,
   signOutSuccess,
-
+  createGameSuccess,
+  updateGame,
+  endGame,
 };
