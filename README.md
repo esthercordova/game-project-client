@@ -1,6 +1,6 @@
 ### Tic Tac Toe
 
-##Technologies used
+## Technologies used
 
 - Javascript
 - jQuery
