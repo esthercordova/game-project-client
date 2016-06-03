@@ -44,6 +44,14 @@ const onCreateNewGame = function(event){
   .fail(ui.failure);
 };
 
+const onGetGame = function(event) {
+  event.preventDefault();
+  let id = $('#game-id').val();
+  api.getGameByID(id)
+  .done(ui.success)
+  .fail(ui.failure);
+};
+
 
 
 const addHandlers = () => {

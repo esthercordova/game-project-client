@@ -54,10 +54,22 @@ const changePassword = function (data) {
       });
   };
 
+  const getGameByID = function(id){
+    return $.ajax(
+      {
+        url: app.host + '/games/' + id,
+        method: 'GET' ,
+        headers: {
+          Authorization: 'Token token=' + app.user.token,
+        },
+      });
+    };
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
-  createNewGame
+  createNewGame,
+  getGameByID
 };
