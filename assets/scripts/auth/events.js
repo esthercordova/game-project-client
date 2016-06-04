@@ -51,7 +51,7 @@ const onGetGame = function(event) {
   event.preventDefault();
   let id = $('#game-id').val();
   api.getGameByID(id)
-  .done(ui.success)
+  .done(ui.getGameSuccess)
   .fail(ui.failure);
 };
 

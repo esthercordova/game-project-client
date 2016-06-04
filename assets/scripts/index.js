@@ -230,7 +230,7 @@ $(() => {
 
   });
 
-  $('#playAgain').on('click', function(event) {
+  $('#playAgain').on('click', function() {
     $('#gameOver').modal('toggle');
   });
 

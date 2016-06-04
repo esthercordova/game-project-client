@@ -2,9 +2,17 @@
 
 const app = require('../app.js');
 
+const getGameSuccess = (data) => {
+  if(data){
+    $("#totalGames").html(data.games.length);
+} else {
+
+}
+};
+
 const success = (data) => {
   if(data){
-
+    console.log(data);
 } else {
 
 }
@@ -21,10 +29,12 @@ const signInSuccess = (data) => {
 const signOutSuccess = function (){
   app.user = null;
 
-
 };
 
 const createGameSuccess = function (data) {
+  console.log('in ui data');
+  console.log(data);
+  console.log(data.game);
   app.game = data.game;
 
 };

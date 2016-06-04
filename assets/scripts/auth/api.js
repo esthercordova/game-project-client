@@ -61,7 +61,7 @@ const changePassword = function (data) {
         method: 'GET' ,
         headers: {
           Authorization: 'Token token=' + app.user.token,
-        },
+        }
       });
     };
 
