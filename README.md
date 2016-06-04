@@ -1,9 +1,8 @@
-### Tic Tac Toe
+#### Tic Tac Toe
 
 ## Technologies used
-
 - Javascript
-- jQuery
+- - jQuery
 - HTML & SCSS
 - Ajax
 
@@ -22,6 +21,8 @@
 - As a consumer of a tictactoe game I want the game to respect all common rules.
 
 ## Link To Game
+
+- http://esthercordova.github.io/game-project-client/index.html
 
 ## Link to previous repo
 
