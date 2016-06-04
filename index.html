@@ -15,7 +15,6 @@
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOut"> Sign Out </button>
 
-
 	<h1>Code Tac Toe</h1>
 
 	 <div id="board">
@@ -40,9 +39,14 @@
 	<form>
 	<input type="button" id="newGame" value="new Game">
 	</form>
-	</br>
 
 	</br>
+	<table>
+		<tr>
+			<td><p> Make your move, player: </p></td>
+		  <td id="showPlayersTurn"></td>
+		</tr>
+	</table>
 
 	<p id="totalGames"></p>
 	<p id="playero"></p>
@@ -50,15 +54,7 @@
 	<p id="numberOfTies"></p>
 	<p id="gameWinner"></p>
 
-	<table>
-		<tr>
-			<td><p> Make your move, player: </p></td>
-		    <td id="showPlayersTurn"></td>
-		</tr>
-	</table>
-
   </div>
-
 
 <!-- Modal Sign In-->
 <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -72,6 +68,7 @@
 						<input type="text" value='esther' name="credentials[email]" placeholder="Email">
 						<input type="password" value='esther' name="credentials[password]" placeholder="password">
 						<input type="submit" name="submit" value="Sign In!">
+						<div id='signInMessage'></div>
 					</fieldset>
 				</form>
 				<form id="change-password">
@@ -93,7 +90,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-				
+
 				<form id="sign-up">
 							<fieldset>
 								<legend>Sign up!</legend>

@@ -22,10 +22,14 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   // assign data to be available in app.js - not using this in the moment
   app.user = data.user;
+  // in model alerts
+  $('#signInMessage').html('You successfully logged in!');
+
 };
 
 const signOutSuccess = function (){
   app.user = null;
+  $('#signInMessage').html('');
 
 };
 
@@ -245,7 +249,6 @@ const getGameSuccess = (data) => {
 
 }
 };
-
 
 module.exports = {
   failure,
