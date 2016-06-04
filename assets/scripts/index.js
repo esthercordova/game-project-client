@@ -9,7 +9,8 @@ $(() => {
   authEvents.addHandlers();
 });
 
-
+  let scoreO = 0;
+  let scoreX = 0;
 
   let boardState;
   let simpleArray = ['', '', '', '', '', '', '', '', ''];
@@ -33,9 +34,6 @@ $(() => {
 
   let winner; //grey is x pink is o
 
-  let scoreO = 0;
-  let scoreX = 0;
-
   let endGame = function() {
     if (winner === 'o' || winner === 'x') {
       if (winner === 'o') {
@@ -43,18 +41,22 @@ $(() => {
       } else {
         scoreX += 1;
       }
-      activeGame = false;
-      api.onEndGame()
-        .done(ui.endGame)
-        .fail(ui.failure);
 
       if (winner === 'o') {
         $('#playero').html('Player o : ' + scoreO);
+        $('#gameWinner').html('The winner is: ' + winner);
       } else if (winner === 'x') {
         $('#playerx').html('Player x : ' + scoreX);
+        $('#gameWinner').html('The winner is: ' + winner);
       }
-      $('#gameWinner').html('The winner is: ' + winner);
+      else if (winner === 'tie'){
+        $('#gameWinner').html('The game is a tie');
+      }
+      api.onEndGame()
+        .done(ui.endGame)
+        .fail(ui.failure);
       winner = null;
+      activeGame = false;
     }
   };
 
@@ -81,7 +83,7 @@ $(() => {
         playerMove = 'o';
       }
 
-      winner = ui.checkBoardGame(boardState, winner);
+      winner = ui.checkBoardGame(boardState);
     }
 
     api.onUpdateGame(index, player, over)

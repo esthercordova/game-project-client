@@ -15,6 +15,11 @@ const onSignUp = function(event){
 
 const eventsSignInSuccess = function(data){
   ui.signInSuccess(data);
+
+  api.getGameByID("")
+  .done(ui.getGameSuccess)
+  .fail(ui.failure);
+
   api.createNewGame()
   .done(ui.createGameSuccess)
   .fail(ui.failure);
@@ -50,21 +55,12 @@ const onCreateNewGame = function(event){
   .fail(ui.failure);
 };
 
-const onGetGame = function(event) {
-  event.preventDefault();
-  let id = "";
-  api.getGameByID(id)
-  .done(ui.getGameSuccess)
-  .fail(ui.failure);
-};
-
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#sign-out').on('submit', onSignOut);
   $('#change-password').on('submit', onChangePassword);
   $('#newGame').click(onCreateNewGame);
-  $('#getGame').on('submit', onGetGame);
   $('#playAgain').on('click', onCreateNewGame);
 
 };

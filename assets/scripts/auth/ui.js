@@ -1,15 +1,6 @@
 'use strict';
 
 const app = require('../app.js');
-const api = require('./api.js');
-
-const getGameSuccess = (data) => {
-  if(data){
-    $("#totalGames").html(data.games.length);
-} else {
-
-}
-};
 
 const success = (data) => {
   if(data){
@@ -24,6 +15,7 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
+  // assign data to be available in app.js - not using this in the moment
   app.user = data.user;
 };
 
@@ -58,8 +50,8 @@ let checkTie = function(boardState) {
   return true;
 };
 
-let checkBoardGame = function(boardState, winner) {
-
+let checkBoardGame = function(boardState) {
+  var winner;
   //row 1
   if ('' !== boardState['0'] &&
     boardState['0'] === boardState['1'] &&
@@ -69,9 +61,12 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['0'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['0'] === 'o') {
       winner = 'o';
       return winner;
+    }
+    else {
+      return null;
     }
   }
   //row 2
@@ -97,9 +92,12 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['6'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['6'] === 'o') {
       winner = 'o';
       return winner;
+    }
+    else {
+      return null;
     }
   }
   //col 1
@@ -111,9 +109,12 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['0'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['0'] === 'o') {
       winner = 'o';
       return winner;
+    }
+    else {
+      return null;
     }
   }
   //col 2
@@ -125,9 +126,12 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['1'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['1'] === 'o') {
       winner = 'o';
       return winner;
+    }
+    else {
+      return null;
     }
   }
   //col 3
@@ -139,9 +143,12 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['2'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['2'] === 'o') {
       winner = 'o';
       return winner;
+    }
+    else {
+      return null;
     }
   }
   //diagonal 1
@@ -153,9 +160,12 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['0'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['0'] === 'o') {
       winner = 'o';
       return winner;
+    }
+    else {
+      return null;
     }
   }
   //diagonal 2
@@ -167,20 +177,62 @@ let checkBoardGame = function(boardState, winner) {
     if (boardState['2'] === 'x') {
       winner = 'x';
       return winner;
-    } else {
+    } else if(boardState['2'] === 'o') {
       winner = 'o';
       return winner;
     }
+    else {
+      return null;
+    }
   } else if (checkTie(boardState) === true) {
-    $('#gameWinner').html('The game is a tie');
-    api.onEndGame()
-      .done(endGame)
-      .fail(failure);
-      winner = null;
-      return winner;
+      return 'tie';
 
+  } else{
+    return null;
   }
 
+};
+
+const getGameSuccess = (data) => {
+  if(data){
+    let totalGamesWonByX = 0;
+    let totalGamesWonByO = 0;
+    let totalTies = 0;
+    let totalGames = 0;
+
+    // console.log(data.games);
+    for (var i = 0; i < data.games.length; i++) {
+      var simpleArrayFromServer = data.games[i].cells;
+
+      var associatedArrayForBoardState = {};
+      for (var j = 0; j < simpleArrayFromServer.length; j++) {
+        associatedArrayForBoardState[j.toString()] = simpleArrayFromServer[j];
+      }
+
+      var winnerOfServerGame = checkBoardGame(associatedArrayForBoardState);
+
+      if (winnerOfServerGame === 'x'){
+        totalGamesWonByX += 1;
+        totalGames += 1;
+      }
+      else if (winnerOfServerGame === 'o'){
+        totalGamesWonByO += 1;
+        totalGames += 1;
+      }
+      else if (winnerOfServerGame === 'tie'){
+        totalTies += 1;
+        totalGames += 1;
+      }
+    }
+
+    $("#totalGames").html(" Total Games Played : " + totalGames);
+    $("#playero").html(" Player o : " + totalGamesWonByO);
+    $("#playerx").html(" Player x : " + totalGamesWonByX);
+    $("#numberOfTies").html(" Ties : " + totalTies);
+
+} else {
+
+}
 };
 
 
