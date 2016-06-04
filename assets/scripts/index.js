@@ -93,13 +93,11 @@ $(() => {
     newGameBegin();
   });
 
+  $('#signIn').on('shown.bs.modal', function () {
+    $('#myInput').focus();
+  });
 
 
-  // $('#signIn').on('shown.bs.modal', function () {
-  //   $('#myInput').focus();
-  // });
-  //
-  //
-  // $('#signUp').on('shown.bs.modal', function () {
-  //   $('#myInput').focus();
-  // });
+  $('#signUp').on('shown.bs.modal', function () {
+    $('#myInput').focus();
+  });
