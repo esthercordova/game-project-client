@@ -10,51 +10,11 @@
 
 </head>
 <body>
-
-
   <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
-<button type="button" class="btn btn-info btn-lg"> Sign Out </button> -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOut"> Sign Out </button>
 
-	<div id='sign-in-and-out-section'>
-		<div>
-		<form id="sign-up">
-	        <fieldset>
-	          <legend>Sign up!</legend>
-	          <input type="text" name="credentials[email]" placeholder="Email">
-	          <input type="password" name="credentials[password]" placeholder="password">
-	          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
-	          <input type="submit" name="submit" value="Sign up!">
-	        </fieldset>
-	      </form>
-
-	      <form id="sign-in">
-	        <fieldset>
-	          <legend>Sign in!</legend>
-	          <input type="text" value='esther' name="credentials[email]" placeholder="Email">
-	          <input type="password" value='esther' name="credentials[password]" placeholder="password">
-	          <input type="submit" name="submit" value="Sign In!">
-	        </fieldset>
-	      </form>
-
-	      <form id="sign-out">
-	        <fieldset>
-	          <legend>Sign out!</legend>
-	          <input type="submit" name="submit" value="Sign Out!">
-	        </fieldset>
-	      </form>
-
-	      <form id="change-password">
-	        <fieldset>
-	          <legend>Change Password!</legend>
-	          <input type="text" name="passwords[old]" placeholder="old password">
-	          <input type="password" name="passwords[new]" placeholder="new password">
-	          <input type="submit" name="submit" value="Change Password!">
-	        </fieldset>
-	      </form>
-		</div>
-	</div>
 
 	<h1>Code Tac Toe</h1>
 
@@ -101,47 +61,83 @@
 
 
 <!-- Modal Sign In-->
-<!-- <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
 
-        <form id="sign-in">
-	        <fieldset>
-	          <legend>Sign In</legend>
-	          <input type="text" name="credentials[email]" placeholder="Email">
-	          <input type="password" name="credentials[password]" placeholder="password">
-	          <input type="submit" name="submit" value="Sign In!">
-	        </fieldset>
-	      </form>
-	    <form id="change-password">
-	        <fieldset>
-	          <legend>Forget your password?</legend>
-	          <input type="text" name="passwords[old]" placeholder="old password">
-	          <input type="password" name="passwords[new]" placeholder="new password">
-	          <input type="submit" name="submit" value="Change Password!">
-	        </fieldset>
-	      </form>
+				<form id="sign-in">
+					<fieldset>
+						<legend>Sign in!</legend>
+						<input type="text" value='esther' name="credentials[email]" placeholder="Email">
+						<input type="password" value='esther' name="credentials[password]" placeholder="password">
+						<input type="submit" name="submit" value="Sign In!">
+					</fieldset>
+				</form>
+				<form id="change-password">
+					<fieldset>
+						<legend>Change Password!</legend>
+						<input type="text" name="passwords[old]" placeholder="old password">
+						<input type="password" name="passwords[new]" placeholder="new password">
+						<input type="submit" name="submit" value="Change Password!">
+					</fieldset>
+				</form>
 
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- Modal Sign Up-->
-<div class="modal fade" id="gameOver" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-				<h1> GAME OVER! PLAY AGAIN?</h1>
-				<button id="playAgain">PLAY AGAIN</button>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Modal Sign up-->
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+				
+				<form id="sign-up">
+							<fieldset>
+								<legend>Sign up!</legend>
+								<input type="text" name="credentials[email]" placeholder="Email">
+								<input type="password" name="credentials[password]" placeholder="password">
+								<input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
+								<input type="submit" name="submit" value="Sign up!">
+							</fieldset>
+					</form>
 
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Modal Sign Out-->
+<div class="modal fade" id="signOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+
+				<form id="sign-out">
+					<fieldset>
+						<legend>Sign out!</legend>
+						<input type="submit" name="submit" value="Sign Out!">
+					</fieldset>
+				</form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Game Over-->
+<div class="modal fade" id="gameOver" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+				<h1> GAME OVER! PLAY AGAIN?</h1>
+				<button id="playAgain">Play again?</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
