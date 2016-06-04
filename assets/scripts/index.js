@@ -9,9 +9,6 @@ $(() => {
   authEvents.addHandlers();
 });
 
-  let scoreO = 0;
-  let scoreX = 0;
-
   let boardState;
   let simpleArray = ['', '', '', '', '', '', '', '', ''];
   let activeGame = false;
@@ -35,23 +32,10 @@ $(() => {
   let winner; //grey is x pink is o
 
   let endGame = function() {
-    if (winner === 'o' || winner === 'x') {
-      if (winner === 'o') {
-        scoreO += 1;
-      } else {
-        scoreX += 1;
-      }
+    if (winner === 'o' || winner === 'x' || winner === 'tie') {
 
-      if (winner === 'o') {
-        $('#playero').html('Player o : ' + scoreO);
-        $('#gameWinner').html('The winner is: ' + winner);
-      } else if (winner === 'x') {
-        $('#playerx').html('Player x : ' + scoreX);
-        $('#gameWinner').html('The winner is: ' + winner);
-      }
-      else if (winner === 'tie'){
-        $('#gameWinner').html('The game is a tie');
-      }
+      ui.upDateScoreOnUI(winner);
+
       api.onEndGame()
         .done(ui.endGame)
         .fail(ui.failure);

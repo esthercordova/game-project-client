@@ -2,6 +2,11 @@
 
 const app = require('../app.js');
 
+let totalGamesWonByX = 0;
+let totalGamesWonByO = 0;
+let totalTies = 0;
+let totalGames = 0;
+
 const success = (data) => {
   if(data){
     console.log(data);
@@ -193,12 +198,34 @@ let checkBoardGame = function(boardState) {
 
 };
 
+const upDateScoreOnUI = (winnerOfGame) => {
+
+  if (winnerOfGame === 'x'){
+    totalGamesWonByX += 1;
+    totalGames += 1;
+  }
+  else if (winnerOfGame === 'o'){
+    totalGamesWonByO += 1;
+    totalGames += 1;
+  }
+  else if (winnerOfGame === 'tie'){
+    totalTies += 1;
+    totalGames += 1;
+  }
+
+$("#totalGames").html(" Total Games Played : " + totalGames);
+$("#playero").html(" Player o : " + totalGamesWonByO);
+$("#playerx").html(" Player x : " + totalGamesWonByX);
+$("#numberOfTies").html(" Ties : " + totalTies);
+
+};
+
 const getGameSuccess = (data) => {
   if(data){
-    let totalGamesWonByX = 0;
-    let totalGamesWonByO = 0;
-    let totalTies = 0;
-    let totalGames = 0;
+    totalGamesWonByX = 0;
+    totalGamesWonByO = 0;
+    totalTies = 0;
+    totalGames = 0;
 
     // console.log(data.games);
     for (var i = 0; i < data.games.length; i++) {
@@ -210,25 +237,9 @@ const getGameSuccess = (data) => {
       }
 
       var winnerOfServerGame = checkBoardGame(associatedArrayForBoardState);
+      upDateScoreOnUI(winnerOfServerGame);
 
-      if (winnerOfServerGame === 'x'){
-        totalGamesWonByX += 1;
-        totalGames += 1;
-      }
-      else if (winnerOfServerGame === 'o'){
-        totalGamesWonByO += 1;
-        totalGames += 1;
-      }
-      else if (winnerOfServerGame === 'tie'){
-        totalTies += 1;
-        totalGames += 1;
-      }
     }
-
-    $("#totalGames").html(" Total Games Played : " + totalGames);
-    $("#playero").html(" Player o : " + totalGamesWonByO);
-    $("#playerx").html(" Player x : " + totalGamesWonByX);
-    $("#numberOfTies").html(" Ties : " + totalTies);
 
 } else {
 
@@ -245,5 +256,6 @@ module.exports = {
   updateGame,
   endGame,
   getGameSuccess,
-  checkBoardGame
+  checkBoardGame,
+  upDateScoreOnUI
 };
