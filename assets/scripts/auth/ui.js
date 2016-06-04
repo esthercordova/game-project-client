@@ -30,6 +30,7 @@ const signInSuccess = (data) => {
 const signOutSuccess = function (){
   app.user = null;
   $('#signInMessage').html('');
+  $('#signOutMessage').html("It's sad to see you leave... take care");
 
 };
 
