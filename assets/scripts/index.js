@@ -9,6 +9,8 @@ $(() => {
   authEvents.addHandlers();
 });
 
+
+
   let boardState;
   let simpleArray = ['', '', '', '', '', '', '', '', ''];
   let activeGame = false;

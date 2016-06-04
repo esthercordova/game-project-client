@@ -2,6 +2,7 @@
 
 const app = require('../app.js');
 
+
 const getGameSuccess = (data) => {
   if(data){
     $("#totalGames").html(data.games.length);
@@ -57,4 +58,5 @@ module.exports = {
   createGameSuccess,
   updateGame,
   endGame,
+  getGameSuccess
 };
