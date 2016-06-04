@@ -15,9 +15,19 @@ const success = (data) => {
 }
 };
 
+const changePasswordSuccess = () => {
+  $('#changePasswordMessage').html('You successfully changed your password.');
+  $('#signUpMessage').html('');
+  $('#signOutMessage').html('');
+  $('#signInMessage').html('');
+};
+
 const signUpSuccess = (data) => {
   if(data){
-  $('#signUpMessage').html('You made an account. Please sign in to start playing.');
+    $('#signUpMessage').html('You made an account. Please sign in to start playing.');
+    $('#signInMessage').html('');
+    $('#signOutMessage').html('');
+    $('#changePasswordMessage').html('');
 } else{
 
 }
@@ -28,17 +38,19 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  // assign data to be available in app.js - not using this in the moment
   app.user = data.user;
   $('#signInMessage').html('You successfully logged in!');
-
+  $('#signUpMessage').html('');
+  $('#signOutMessage').html('');
+  $('#changePasswordMessage').html('');
 };
 
 const signOutSuccess = function (){
   app.user = null;
   $('#signInMessage').html('');
   $('#signOutMessage').html("It's sad to see you leave... Come back soon.");
-
+  $('#signUpMessage').html('');
+  $('#changePasswordMessage').html('');
 };
 
 const createGameSuccess = function (data) {
@@ -269,5 +281,6 @@ module.exports = {
   getGameSuccess,
   checkBoardGame,
   upDateScoreOnUI,
-  signUpSuccess
+  signUpSuccess,
+  changePasswordSuccess
 };

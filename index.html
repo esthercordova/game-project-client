@@ -10,6 +10,7 @@
 
 </head>
 <body>
+	<div class="container">
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
@@ -74,9 +75,10 @@
 				<form id="change-password">
 					<fieldset>
 						<legend>Change Password!</legend>
-						<input type="text" name="passwords[old]" placeholder="old password">
+						<input type="password" name="passwords[old]" placeholder="old password">
 						<input type="password" name="passwords[new]" placeholder="new password">
 						<input type="submit" name="submit" value="Change Password!">
+						<div id='changePasswordMessage'></div>
 					</fieldset>
 				</form>
 
@@ -131,12 +133,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-				<h1> GAME OVER! PLAY AGAIN?</h1>
+				<h1> GAME OVER!     PLAY AGAIN?</h1>
 				<button id="playAgain">Play again?</button>
       </div>
     </div>
   </div>
 </div>
 
+</div>
 </body>
 </html>
