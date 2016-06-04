@@ -182,7 +182,12 @@ $(() => {
         return winner;
       }
     } else if (checkTie() === true) {
+      activeGame = false;
       $('#gameWinner').html('The game is a tie');
+      api.onEndGame()
+        .done(ui.endGame)
+        .fail(ui.failure);
+
     }
 
   };
@@ -234,6 +239,7 @@ $(() => {
 
   $('#playAgain').on('click', function() {
     $('#gameOver').modal('toggle');
+    newGameBegin();
   });
 
 

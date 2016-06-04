@@ -52,7 +52,7 @@ const onCreateNewGame = function(event){
 
 const onGetGame = function(event) {
   event.preventDefault();
-  let id = $('#game-id').val();
+  let id = "";
   api.getGameByID(id)
   .done(ui.getGameSuccess)
   .fail(ui.failure);
