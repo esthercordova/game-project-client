@@ -15,6 +15,14 @@ const success = (data) => {
 }
 };
 
+const signUpSuccess = (data) => {
+  if(data){
+  $('#signUpMessage').html('You made an account. Please sign in to start playing.');
+} else{
+
+}
+};
+
 const failure = (error) => {
   console.error(error);
 };
@@ -22,7 +30,6 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   // assign data to be available in app.js - not using this in the moment
   app.user = data.user;
-  // in model alerts
   $('#signInMessage').html('You successfully logged in!');
 
 };
@@ -30,7 +37,7 @@ const signInSuccess = (data) => {
 const signOutSuccess = function (){
   app.user = null;
   $('#signInMessage').html('');
-  $('#signOutMessage').html("It's sad to see you leave... take care");
+  $('#signOutMessage').html("It's sad to see you leave... Come back soon.");
 
 };
 
@@ -261,5 +268,6 @@ module.exports = {
   endGame,
   getGameSuccess,
   checkBoardGame,
-  upDateScoreOnUI
+  upDateScoreOnUI,
+  signUpSuccess
 };
