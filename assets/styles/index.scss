@@ -26,10 +26,10 @@ p {
 	text-align: center;
 	font-size: 5em;
 }
-#welcomeModal {
+
+.modal {
 	z-index:9999;
 }
-
 .container {
 	margin-top: 20px;
   width: 330px;
@@ -45,18 +45,6 @@ h1 {
 	width: 306px;
 }
 
-// #playero {
-// 	display: inline-block;
-//
-// }
-//
-// #playerx {
-// 	display: inline-block;
-//
-// }
-// #numberOfTies {
-// 	display: inline-block;
-// }
 
 body {
 	background-color: white;

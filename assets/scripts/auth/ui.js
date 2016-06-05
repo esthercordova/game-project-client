@@ -45,6 +45,7 @@ const signInSuccess = (data) => {
   $('#signUpMessage').html('');
   $('#signOutMessage').html('');
   $('#changePasswordMessage').html('');
+  $('#overlay').hide();
 };
 
 const signOutSuccess = function (){
