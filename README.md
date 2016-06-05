@@ -1,18 +1,20 @@
 # Tic Tac Toe
 
-Welcome to my clean, simple and intuitive Tic Tac Toe game.
+Welcome to my clean, simple and intuitive **Tic Tac Toe** game.
 
 I created from scratch a classic Tic Tac Toe game. The object of Tic Tac Toe is to get three in a row. You play on a three by three gameboard. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled.
 
 ## Technologies used
 -   Javascript
 -   jQuery
--   HTML & SCSS
--   Ajax
+-   Bootstrap
+-   HTML & CSS
+-   Ajax & JSON
+-   Node
 
 ## Planing and Development
 
-I wanted to create a simple, user friendly and intutitive Tic Tac Toe. I started with creating some wireframes, how I imagine the game to look like. Then I concentrated on the game logic and finished end up with a game that was basically ready but needed to connect with the api in order to save data, like how many games have been played etc. In order to make this work I had to restructure some of the beautiful working code. Down below you will find a link which will show you the results of the end product.
+I wanted to create a simple, user friendly and intutitive **Tic Tac Toe**. I started with creating some wireframes, how I imagine the game to look like. Then I concentrated on the game logic and finished end up with a game that was basically ready but needed to connect with the api in order to save data, like how many games have been played etc. In order to make this work I had to restructure some of the beautiful working code. Down below you will find a link which will show you the results of the end product.
 
 ## Problem-Solving Strategy
 
@@ -39,3 +41,5 @@ In this repo you can find the very early commits that handle the game logic:
 -  https://github.com/esthercordova/tictactoe/commits/master
 
 ## Ideas for future iterations
+
+For future iterations it would be nice to be able to play the game from two different devices. 
