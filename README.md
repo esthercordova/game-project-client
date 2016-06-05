@@ -24,7 +24,7 @@ During the project I came to peace with the idea that you sometimes have to take
 
 Find wireframes fro desktop and mobile version here:
 
-[wireframes](https://drive.google.com/file/d/0B25Uw_1rZmBMNk05cU9TcDFhVnM/view?usp=sharing)
+-  [wireframes](https://drive.google.com/file/d/0B25Uw_1rZmBMNk05cU9TcDFhVnM/view?usp=sharing)
 
 ## User Stories
 
@@ -40,13 +40,13 @@ Find wireframes fro desktop and mobile version here:
 
 Go and play a round Tic Tac Toe:
 
-[Tic Tac Toe](http://esthercordova.github.io/game-project-client/index.html)
+-  [Tic Tac Toe](http://esthercordova.github.io/game-project-client/index.html)
 
 ## Link to previous repo
 
 In this repo you can find the very early commits that handle the game logic:
 
-[Game Logic Repo] (https://github.com/esthercordova/tictactoe/commits/master)
+-  [Game Logic Repo] (https://github.com/esthercordova/tictactoe/commits/master)
 
 ## Ideas for future iterations
 

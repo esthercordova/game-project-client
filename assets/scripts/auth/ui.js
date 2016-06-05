@@ -9,7 +9,6 @@ let totalGames = 0;
 
 const success = (data) => {
   if(data){
-    console.log(data);
 } else {
 
 }
@@ -34,7 +33,6 @@ const signUpSuccess = (data) => {
 };
 
 const failure = (error) => {
-  console.error(error);
 };
 
 const signInSuccess = (data) => {
@@ -54,8 +52,6 @@ const signOutSuccess = function (){
 };
 
 const createGameSuccess = function (data) {
-  console.log(data);
-  console.log(data.game);
   app.game = data.game;
 
 };
@@ -251,7 +247,6 @@ const getGameSuccess = (data) => {
     totalTies = 0;
     totalGames = 0;
 
-    // console.log(data.games);
     for (var i = 0; i < data.games.length; i++) {
       var simpleArrayFromServer = data.games[i].cells;
 
