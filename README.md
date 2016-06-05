@@ -2,7 +2,7 @@
 
 Welcome to my clean, simple and intuitive **Tic Tac Toe** game.
 
-I created from scratch a classic Tic Tac Toe game. The object of Tic Tac Toe is to get three in a row. You play on a three by three gameboard. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled.
+I created from scratch a classic Tic Tac Toe game. The object of Tic Tac Toe is to get three in a row. You play on a three by three gameboard. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either opponent has three in a row or all nine squares are filled.
 
 ## Technologies used
 -   Javascript
@@ -12,9 +12,9 @@ I created from scratch a classic Tic Tac Toe game. The object of Tic Tac Toe is 
 -   Ajax & JSON
 -   Node
 
-## Planing and Development
+## Planning and Development
 
-I wanted to create a simple, user friendly and intutitive **Tic Tac Toe**. I started with creating some wireframes, how I imagine the game to look like. Then I concentrated on the game logic and finished end up with a game that was basically ready but needed to connect with the api in order to save data, like how many games have been played etc. In order to make this work I had to restructure some of the beautiful working code. Down below you will **find a link which will show you the results** of the end product.
+I wanted to create a simple, user friendly and intuitive **Tic Tac Toe**. I started with creating some wireframes, how I imagine the game to look like. Then I concentrated on the game logic and finished end up with a game that was basically ready but needed to connect with the API in order to save data, like how many games have been played etc. In order to make this work I had to restructure some of the beautiful working code. Down below you will **find a link which will show you the results** of the end product.
 
 ## Problem-Solving Strategy
 
@@ -32,7 +32,7 @@ Find wireframes fro desktop and mobile version here:
 -   I as a user want to be able to try the game without having to log in first.
 -   When I sign in, I want my game statistics be saved.
 -   I as a user want to have a nice design of the game so that I can enjoy using the game more.
--   As a consumer of a tictactoe game I want the game to respect all common rules.
+-   As a consumer of a Tic Tac Toe game I want the game to respect all common rules.
 -   As a user I want to be able to log out at any time.
 -   During the game I want to see whose turn it is.
 
@@ -51,3 +51,4 @@ In this repo you can find the very early commits that handle the game logic:
 ## Ideas for future iterations
 
 For future iterations it would be nice to be able to play the game from two different devices. I would also love to customize the welcome message based on cookies. So if a user been on my webpage before I would like to display a different message to them.
+
