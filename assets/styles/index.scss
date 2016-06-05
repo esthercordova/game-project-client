@@ -12,10 +12,23 @@ p {
     display: inline-block;
 }
 
-// #totalGames{
-// 	text-align: right;
-// 	float: right;
-// }
+#overlay {
+	position:absolute;
+	top:80px;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:white;
+	z-index:9998;
+	padding-top: 100px;
+	padding-left: 300px;
+	padding-right: 300px;
+	text-align: center;
+	font-size: 5em;
+}
+#welcomeModal {
+	z-index:9999;
+}
 
 .container {
 	margin-top: 20px;

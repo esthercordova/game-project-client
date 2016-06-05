@@ -50,4 +50,4 @@ In this repo you can find the very early commits that handle the game logic:
 
 ## Ideas for future iterations
 
-For future iterations it would be nice to be able to play the game from two different devices.
+For future iterations it would be nice to be able to play the game from two different devices. I would also love to customize the welcome message based on cookies. So if a user been on my webpage before I would like to display a different message to them.

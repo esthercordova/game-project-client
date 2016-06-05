@@ -6,16 +6,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
 	<script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-
 </head>
 <body>
+	<div id="overlay"> Sign in to play a glorious game of <br> Tic Tac Toe. </div>
 	<div class="container">
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
-<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
-<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signOut"> Sign Out </button>
-
-</div>
+		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
+		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
+		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signOut"> Sign Out </button>
+	</div>
 
 	<h1>Tic Tac Toe</h1>
 
@@ -145,6 +144,19 @@
 				<h1> GAME OVER!</h1>
 			</br> </br>
 				<button id="playAgain">Play again?</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Welcome modal -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+				<h1> Welcome!</h1>
+			</br>
       </div>
     </div>
   </div>
