@@ -24,11 +24,11 @@ During the project I came to peace with the idea that you sometimes have to take
 
 Find wireframes fro desktop and mobile version here:
 
--  https://drive.google.com/file/d/0B25Uw_1rZmBMNk05cU9TcDFhVnM/view?usp=sharing
+[wireframes](https://drive.google.com/file/d/0B25Uw_1rZmBMNk05cU9TcDFhVnM/view?usp=sharing)
 
 ## User Stories
 
--   I as a user want to be able to sign up and start a game
+-   I as a user want to be able to sign up and start a game.
 -   I as a user want to be able to try the game without having to log in first.
 -   When I sign in, I want my game statistics be saved.
 -   I as a user want to have a nice design of the game so that I can enjoy using the game more.
@@ -38,13 +38,15 @@ Find wireframes fro desktop and mobile version here:
 
 ## Link To Game
 
--   http://esthercordova.github.io/game-project-client/index.html
+Go and play a round Tic Tac Toe:
+
+[Tic Tac Toe](http://esthercordova.github.io/game-project-client/index.html)
 
 ## Link to previous repo
 
 In this repo you can find the very early commits that handle the game logic:
 
--  https://github.com/esthercordova/tictactoe/commits/master
+[Game Logic Repo] (https://github.com/esthercordova/tictactoe/commits/master)
 
 ## Ideas for future iterations
 
