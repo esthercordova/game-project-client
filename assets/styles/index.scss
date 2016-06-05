@@ -8,6 +8,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 	height: 100px;
 }
 
+.container {
+  width: 330px ;
+}
+
 h1 {
 	text-align: center;
 	color: #59b294;
@@ -51,4 +55,7 @@ body {
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.16);
   -webkit-font-smoothing: antialiased;
+}
+
+.btn {
 }
