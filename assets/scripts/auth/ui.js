@@ -2,6 +2,10 @@
 
 const app = require('../app.js');
 
+$(window).load(function(){
+       $('#welcomeModal').modal('show');
+   });
+
 let totalGamesWonByX = 0;
 let totalGamesWonByO = 0;
 let totalTies = 0;
