@@ -240,7 +240,7 @@ const upDateScoreOnUI = (winnerOfGame) => {
 $("#totalGames").html(" Total Games Played : " + totalGames);
 $("#playero").html(" Player o : " + totalGamesWonByO);
 $("#playerx").html(" Player x : " + totalGamesWonByX);
-$("#numberOfTies").html(" Ties : " + totalTies);
+$("#numberOfTies").html(" Ties : "+ totalTies);
 
 };
 

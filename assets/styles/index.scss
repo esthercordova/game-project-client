@@ -8,8 +8,18 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 	height: 100px;
 }
 
+p {
+    display: inline-block;
+}
+
+// #totalGames{
+// 	text-align: right;
+// 	float: right;
+// }
+
 .container {
-  width: 330px ;
+	margin-top: 20px;
+  width: 330px;
 }
 
 h1 {
@@ -22,18 +32,18 @@ h1 {
 	width: 306px;
 }
 
-#playero {
-	color: #999999;
-	display: inline-block;
-}
-
-#playerx {
-	color: #4dffc3;
-	display: inline-block;
-}
-#numberOfTies {
-	display: inline-block;
-}
+// #playero {
+// 	display: inline-block;
+//
+// }
+//
+// #playerx {
+// 	display: inline-block;
+//
+// }
+// #numberOfTies {
+// 	display: inline-block;
+// }
 
 body {
 	background-color: white;
@@ -57,5 +67,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.btn {
+.gameStatistics {
+	font-weight: bold;
 }
