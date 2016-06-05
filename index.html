@@ -8,7 +8,7 @@
 	<script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 <body>
-	<div id="overlay"> Sign in to play a glorious game of <br> Tic Tac Toe. </div>
+	<div id="overlay"></div>
 	<div class="container">
   <!-- Button trigger modal -->
 		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
@@ -71,27 +71,28 @@
     <div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Sign in or change password</h1>
 			</div>
       <div class="modal-body">
-
-				<form id="sign-in">
-					<fieldset>
-						<legend>Sign in!</legend>
-						<input type="text" value='esther' name="credentials[email]" placeholder="Email">
-						<input type="password" value='esther' name="credentials[password]" placeholder="password">
-						<input type="submit" name="submit" value="Sign In!">
-						<div id='signInMessage'></div>
-					</fieldset>
-				</form>
-				<form id="change-password">
-					<fieldset>
-						<legend>Change Password!</legend>
-						<input type="password" name="passwords[old]" placeholder="old password">
-						<input type="password" name="passwords[new]" placeholder="new password">
-						<input type="submit" name="submit" value="Change Password!">
-						<div id='changePasswordMessage'></div>
-					</fieldset>
-				</form>
+				</br>
+					<form id="sign-in">
+						<fieldset>
+							<input type="text" value='' name="credentials[email]" placeholder="Email">
+							<input type="password" value='' name="credentials[password]" placeholder="password">
+							<input type="submit" name="submit" value="Sign In!">
+							<div id='signInMessage'></div>
+						</fieldset>
+					</form>
+				</br>
+					<form id="change-password">
+						<fieldset>
+							<input type="password" name="passwords[old]" placeholder="old password">
+							<input type="password" name="passwords[new]" placeholder="new password">
+							<input type="submit" name="submit" value="Change Password!">
+							<div id='changePasswordMessage'></div>
+						</fieldset>
+					</form>
+					</br>
 
       </div>
     </div>
@@ -104,12 +105,12 @@
     <div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Sign up</h1>
 			</div>
       <div class="modal-body">
-
+			</br>
 				<form id="sign-up">
 							<fieldset>
-								<legend>Sign up!</legend>
 								<input type="text" name="credentials[email]" placeholder="Email">
 								<input type="password" name="credentials[password]" placeholder="password">
 								<input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
@@ -117,6 +118,8 @@
 								<div id='signUpMessage'></div>
 							</fieldset>
 					</form>
+
+				</br>
 
       </div>
     </div>
@@ -129,11 +132,12 @@
     <div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Do you really want to leave?</h1>
 			</div>
       <div class="modal-body">
+
 				<form id="sign-out">
 					<fieldset>
-						<legend> Do you really want to leave?</legend>
 						<input type="submit" name="submit" value="Sign Out!">
 					</fieldset>
 					<div id='signOutMessage'></div>
@@ -167,9 +171,11 @@
     <div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Welcome!</h1>
 			</div>
 			<div class="modal-body">
-				<h1> Welcome!</h1>
+				<h2>Sign in to play a glorious game of </h2>
+				<h2>Tic Tac Toe.</h2>
 			</br>
       </div>
     </div>

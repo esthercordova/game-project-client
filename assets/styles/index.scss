@@ -23,7 +23,6 @@ p {
 	padding-top: 100px;
 	padding-left: 300px;
 	padding-right: 300px;
-	text-align: center;
 	font-size: 5em;
 }
 
@@ -43,6 +42,10 @@ h1 {
 #board{
 	margin: auto auto;
 	width: 306px;
+}
+
+#welcomeModal{
+	text-align: center;
 }
 
 
