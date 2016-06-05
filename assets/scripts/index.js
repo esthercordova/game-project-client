@@ -87,6 +87,7 @@ $(() => {
 
     $('#showPlayersTurn').html(playerMove);
 
+
     endGame();
   });
 

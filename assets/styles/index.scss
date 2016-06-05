@@ -11,7 +11,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 p {
     display: inline-block;
 }
+ #playerx {
+	 color: #33ffbb;
+ }
 
+ #playero {
+	 color: #999999;
+ }
 #overlay {
 	position:absolute;
 	top:80px;
@@ -54,6 +60,10 @@ body {
 	color: #59b294;
 }
 
+.gameStats {
+	color: #808080;
+}
+
 .btn-custom {
   background-color: hsl(170, 47%, 44%) !important;
   background-repeat: repeat-x;
@@ -69,8 +79,4 @@ body {
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.16);
   -webkit-font-smoothing: antialiased;
-}
-
-.gameStatistics {
-	font-weight: bold;
 }
