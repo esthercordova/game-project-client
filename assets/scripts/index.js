@@ -37,10 +37,12 @@ $(() => {
       ui.upDateScoreOnUI(winner);
 
       if (winner === 'tie'){
-        $("#gameWinner").html("The game is a tie. Boring.");
+        $("#gameWinner").html("The game is a tie. Try again.");
+        $("#displayWinnerInModal").text("The game is a tie. Try again.");
       }
       else{
-        $("#gameWinner").html('The winner is ' + winner + '!');
+        $("#gameWinner").html('The winner is ' + winner);
+        $("#displayWinnerInModal").text('The winner is ' + winner);
       }
 
 

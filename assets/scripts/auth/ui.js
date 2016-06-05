@@ -37,6 +37,7 @@ const signUpSuccess = (data) => {
 };
 
 const failure = (error) => {
+  app.error = error;
 };
 
 const signInSuccess = (data) => {
