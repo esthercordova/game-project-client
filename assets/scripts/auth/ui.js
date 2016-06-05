@@ -240,10 +240,10 @@ const upDateScoreOnUI = (winnerOfGame) => {
     totalGames += 1;
   }
 
-$("#totalGames").html(" Total Games Played : " + totalGames);
-$("#playero").html(" Player o : " + totalGamesWonByO);
-$("#playerx").html(" Player x : " + totalGamesWonByX);
-$("#numberOfTies").html(" Ties : "+ totalTies);
+$("#totalGames").html(totalGames);
+$("#playero").html(totalGamesWonByO);
+$("#playerx").html(totalGamesWonByX);
+$("#numberOfTies").html(totalTies);
 
 };
 

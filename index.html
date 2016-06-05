@@ -45,23 +45,24 @@
 			<input type="button" id="newGame" value="new Game">
 		</form>
 
-	</br>
+		<div class="score-board">
+			<div class="player">
+				<h4 id='xlabel'>Player X</h4>
+				<div id="playerx" class="score-box"></div>
+			</div>
+			<div class="player">
+				<h4 id='olabel'>Player O</h4>
+				<div id="playero" class="score-box"></div>
+			</div>
 
-		<table style="width:100%">
-
-		<tr>
-			<td><p id="totalGames" class="gameStats"></p></td>
-		</tr>
-		<tr>
-			<td><p id="playero"></p></td>
-			<td><p id="playerx"></p></td>
-		</tr>
-		<tr>
-			<td><p id="numberOfTies" class="gameStats"></p></td>
-			<td><p id="gameWinner"></p></td>
-		</tr>
-
-			</table>
+			<p>
+				<strong>Total Games:</strong> <span id="totalGames" class="gameStats"></span>
+			</p>
+			<br>
+			<p>
+				<strong>Total Ties:</strong> <span id="numberOfTies" class="gameStats"></span>
+			</p>
+		</div>
 
   </div>
 
