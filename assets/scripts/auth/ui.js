@@ -55,6 +55,7 @@ const signOutSuccess = function (){
   $('#signOutMessage').html("It's sad to see you leave... Come back soon.");
   $('#signUpMessage').html('');
   $('#changePasswordMessage').html('');
+  $('#overlay').show();
 };
 
 const createGameSuccess = function (data) {
