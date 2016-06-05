@@ -24,7 +24,7 @@ During the project I came to peace with the idea that you sometimes have to take
 
 Find wireframes fro desktop and mobile version here:
 
--  [wireframes](https://drive.google.com/file/d/0B25Uw_1rZmBMNk05cU9TcDFhVnM/view?usp=sharing)
+-  [Wireframes](https://drive.google.com/file/d/0B25Uw_1rZmBMNk05cU9TcDFhVnM/view?usp=sharing)
 
 ## User Stories
 
