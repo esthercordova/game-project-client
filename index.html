@@ -6,16 +6,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
 	<script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-
 </head>
 <body>
+	<div id="overlay"></div>
 	<div class="container">
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
-<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
-<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signOut"> Sign Out </button>
-
-</div>
+		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signIn"> Sign In </button>
+		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signUp"> Sign Up </button>
+		<button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target="#signOut"> Sign Out </button>
+	</div>
 
 	<h1>Tic Tac Toe</h1>
 
@@ -46,23 +45,24 @@
 			<input type="button" id="newGame" value="new Game">
 		</form>
 
-	</br>
+		<div class="score-board">
+			<div class="player">
+				<h4 id='xlabel'>Player X</h4>
+				<div id="playerx" class="score-box"></div>
+			</div>
+			<div class="player">
+				<h4 id='olabel'>Player O</h4>
+				<div id="playero" class="score-box"></div>
+			</div>
 
-		<table style="width:100%">
-
-		<tr>
-			<td><p id="totalGames"></p></td>
-		</tr>
-		<tr>
-			<td><p id="playero"></p></td>
-			<td><p id="playerx"></p></td>
-		</tr>
-		<tr>
-			<td><p id="numberOfTies"></p></td>
-			<td><p id="gameWinner"></p></td>
-		</tr>
-
-			</table>
+			<p>
+				<strong>Total Games:</strong> <span id="totalGames" class="gameStats"></span>
+			</p>
+			<br>
+			<p>
+				<strong>Total Ties:</strong> <span id="numberOfTies" class="gameStats"></span>
+			</p>
+		</div>
 
   </div>
 
@@ -70,26 +70,30 @@
 <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Sign in or change password</h1>
+			</div>
       <div class="modal-body">
-
-				<form id="sign-in">
-					<fieldset>
-						<legend>Sign in!</legend>
-						<input type="text" value='esther' name="credentials[email]" placeholder="Email">
-						<input type="password" value='esther' name="credentials[password]" placeholder="password">
-						<input type="submit" name="submit" value="Sign In!">
-						<div id='signInMessage'></div>
-					</fieldset>
-				</form>
-				<form id="change-password">
-					<fieldset>
-						<legend>Change Password!</legend>
-						<input type="password" name="passwords[old]" placeholder="old password">
-						<input type="password" name="passwords[new]" placeholder="new password">
-						<input type="submit" name="submit" value="Change Password!">
-						<div id='changePasswordMessage'></div>
-					</fieldset>
-				</form>
+				</br>
+					<form id="sign-in">
+						<fieldset>
+							<input type="text" value='' name="credentials[email]" placeholder="Email">
+							<input type="password" value='' name="credentials[password]" placeholder="password">
+							<input type="submit" name="submit" value="Sign In!">
+							<div id='signInMessage'></div>
+						</fieldset>
+					</form>
+				</br>
+					<form id="change-password">
+						<fieldset>
+							<input type="password" name="passwords[old]" placeholder="old password">
+							<input type="password" name="passwords[new]" placeholder="new password">
+							<input type="submit" name="submit" value="Change Password!">
+							<div id='changePasswordMessage'></div>
+						</fieldset>
+					</form>
+					</br>
 
       </div>
     </div>
@@ -100,11 +104,14 @@
 <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Sign up</h1>
+			</div>
       <div class="modal-body">
-
+			</br>
 				<form id="sign-up">
 							<fieldset>
-								<legend>Sign up!</legend>
 								<input type="text" name="credentials[email]" placeholder="Email">
 								<input type="password" name="credentials[password]" placeholder="password">
 								<input type="password" name="credentials[password_confirmation]" placeholder="Confirm password">
@@ -112,6 +119,8 @@
 								<div id='signUpMessage'></div>
 							</fieldset>
 					</form>
+
+				</br>
 
       </div>
     </div>
@@ -122,13 +131,17 @@
 <div class="modal fade" id="signOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Do you really want to leave?</h1>
+			</div>
       <div class="modal-body">
 
 				<form id="sign-out">
 					<fieldset>
-						<legend> Do you really want to leave?</legend>
 						<input type="submit" name="submit" value="Sign Out!">
 					</fieldset>
+					<br>
 					<div id='signOutMessage'></div>
 				</form>
 
@@ -141,10 +154,32 @@
 <div class="modal fade" id="gameOver" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">! GAME OVER !</h1>
+			</div>
       <div class="modal-body">
-				<h1> GAME OVER!</h1>
+			<h1 id='displayWinnerInModal'></h1>
 			</br> </br>
-				<button id="playAgain">Play again?</button>
+				<button id="playAgain">Play again ?</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Welcome modal -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title" id="myModalLabel">Welcome!</h1>
+			</div>
+			<div class="modal-body">
+				<h2>Sign in to play a glorious game of </h2>
+				<h2>Tic Tac Toe.</h2>
+			</br>
       </div>
     </div>
   </div>

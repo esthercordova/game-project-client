@@ -37,6 +37,7 @@ const signUpSuccess = (data) => {
 };
 
 const failure = (error) => {
+  app.error = error;
 };
 
 const signInSuccess = (data) => {
@@ -45,6 +46,7 @@ const signInSuccess = (data) => {
   $('#signUpMessage').html('');
   $('#signOutMessage').html('');
   $('#changePasswordMessage').html('');
+  $('#overlay').hide();
 };
 
 const signOutSuccess = function (){
@@ -53,6 +55,7 @@ const signOutSuccess = function (){
   $('#signOutMessage').html("It's sad to see you leave... Come back soon.");
   $('#signUpMessage').html('');
   $('#changePasswordMessage').html('');
+  $('#overlay').show();
 };
 
 const createGameSuccess = function (data) {
@@ -237,10 +240,10 @@ const upDateScoreOnUI = (winnerOfGame) => {
     totalGames += 1;
   }
 
-$("#totalGames").html(" Total Games Played : " + totalGames);
-$("#playero").html(" Player o : " + totalGamesWonByO);
-$("#playerx").html(" Player x : " + totalGamesWonByX);
-$("#numberOfTies").html(" Ties : "+ totalTies);
+$("#totalGames").html(totalGames);
+$("#playero").html(totalGamesWonByO);
+$("#playerx").html(totalGamesWonByX);
+$("#numberOfTies").html(totalTies);
 
 };
 
